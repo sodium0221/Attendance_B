@@ -9,6 +9,12 @@
         <td>
           <%= link_to user.name, user %>
         </td>
+        <td>
+          <%= format_basic_info(user.work_time) %>
+        </td>
+        <td>
+          <%= format_basic_info(user.basic_time) %>
+        </td>
       </tr>
     <% end %>
   </table>

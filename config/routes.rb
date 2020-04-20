@@ -6,14 +6,14 @@ Rails.application.routes.draw do
   get    '/login', to: 'sessions#new'
   post   '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-  
-  get    '/edit_basic_info', to: 'users#edit_basic_info'
-  patch  '/update_basic_info', to: 'users#update_basic_info'
+
   
   resources :users do
     member do
       get 'attendances/edit_one_month'
       patch 'attendances/update_one_month'
+      get 'edit_basic_info'
+      patch 'update_basic_info'
     end 
     resources :attendances, only: :update
   end
