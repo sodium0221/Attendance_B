@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   
   resources :users do
+    get :search, on: :collection
     member do
       get 'attendances/edit_one_month'
       patch 'attendances/update_one_month'
@@ -16,5 +17,6 @@ Rails.application.routes.draw do
       patch 'update_basic_info'
     end 
     resources :attendances, only: :update
+    
   end
 end
