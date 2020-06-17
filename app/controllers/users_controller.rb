@@ -63,10 +63,12 @@ class UsersController < ApplicationController
   end
   
   def search
+    @users = User.paginate(page: params[:page])
+    
     if params[:name].present?
-      @users = User.where('name LIKE ?', "%#{params[:name]}%")
+      @results = User.where('name LIKE ?', "%#{params[:name]}%")
     else
-      @users = User.none
+      @results = User.none
     end 
   end 
 
