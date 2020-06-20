@@ -5,5 +5,9 @@ require_relative 'application'
 Rails.application.initialize!
 
 # ページネーションラベルの設定
-WillPaginate::ViewHelpers.pagination_options[:previous_label] = '前'
-WillPaginate::ViewHelpers.pagination_options[:next_label] = '次'
+WillPaginate::ViewHelpers.pagination_options[:previous_label] = '前へ'
+WillPaginate::ViewHelpers.pagination_options[:next_label] = '次へ'
+
+# to_s（独自フォーマット）の定義
+Time::DATE_FORMATS[:hour] = "%H"
+Time::DATE_FORMATS[:min] = "%M"
