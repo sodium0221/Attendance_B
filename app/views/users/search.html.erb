@@ -12,6 +12,7 @@
 </div>
 
 <div class="col-md-12 result-page">
+  <%= will_paginate %>
   <table class="table table-condensed table-hover" id="table-users">
     <% @results.each do |user| %>
       <tr>
@@ -26,4 +27,5 @@
       </tr>
     <% end %>
   </table>
+  <%= will_paginate %>
 </div>
