@@ -75,14 +75,15 @@
 
 .search-form {
   float: right;
+    input[type="text"] {
+      padding-bottom: 3px;
+      margin-right: -4px;
+      width: 250px;
+      height: 30px;
+  }
 }
 
-input[type="text"] {
-  padding-bottom: 3px;
-  margin-right: -4px;
-  width: 250px;
-  height: 30px;
-}
+
 
 .search-name {
   font-weight: bold;
